@@ -55,6 +55,7 @@ main {
     min-width: 300px;
     align-self: center;
     flex: 1;
+    gap: 2rem;
 }
 .windows > img {
     max-width: 100%;
