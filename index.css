@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Magenta: hsl(300, 69%, 71%);
+    --font-family: 'Poppins', sans-serif;
+    /* font-sizes */
+    --step-0: clamp(1.00rem, calc(0.96rem + 0.18vw), 1.13rem);
+    --step-1: clamp(1.13rem, calc(1.08rem + 0.20vw), 1.27rem);
+    --step-2: clamp(1.27rem, calc(1.22rem + 0.23vw), 1.42rem);
+    --step-3: clamp(1.42rem, calc(1.37rem + 0.25vw), 1.60rem);
+    --step-4: clamp(1.60rem, calc(1.54rem + 0.29vw), 1.80rem);
+    --step-5: clamp(1.80rem, calc(1.74rem + 0.32vw), 2.03rem);
+    --step-6: clamp(2.03rem, calc(1.96rem + 0.36vw), 2.28rem);
+    --step-7: clamp(2.28rem, calc(2.20rem + 0.41vw), 2.57rem);
+    --step-8: clamp(2.57rem, calc(2.47rem + 0.46vw), 2.89rem);
+}
+body {
+    max-height: 100dvh;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    background-image: url(./images/bg-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--Violet);
+    color: white;
+}
+main, .wrapper, .hero, footer {
+    display: flex;
+}
+main, footer {
+    flex-direction: row;
+}
+.wrapper, .hero {
+    flex-direction: column;
+}
+
+.wrapper {
+    padding: 3% 5% 0 5%;
+    gap: 3rem;
+}
+
+main {
+    gap: 4rem;
+}   
+
+.hero {
+    min-width: 300px;
+    align-self: center;
+    flex: 1;
+}
+.windows > img {
+    max-width: 100%;
+}
+
+footer {
+    gap: 1rem;
+    align-self: end;
+    padding-bottom: 0.5rem;
+}
+
+/* styling */
+
+h1 {
+    font-family: var(--font-family);
+    font-size: var(--step-8);
+}
+button {
+    font-size: var(--step-2);
+}
+p {
+    font-size: var(--step-1);
+    line-height: 1.75;
+}
+
+button {
+    background-color: white;
+    color: var(--Violet);
+    border: none;
+    width: 200px;
+    padding: 1.25rem;
+    border-radius: 2.5rem;
+    box-shadow: 5px 5px 10px hsl(256, 47%, 33%);
+}
+span {
+    border: white solid 1px;
+    border-radius: 50%;
+}
+
+button:hover,:focus {
+    background-color: var(--Magenta);
+    color: white;
+    cursor: pointer;
+}
+span:hover,:focus  {
+    color: var(--Magenta);
+    border-color: var(--Magenta);
+    cursor: pointer;
+}
+
+@media screen and (width <= 800px) {
+    body {
+        background-image: url(./images/bg-mobile.svg);
+        background-size: contain;
+        }
+        main {
+            flex-wrap: wrap;
+        }
+        .hero {
+            align-items: center;
+            text-align: center;
+
+        }
+        h1 {
+            font-size: var(--step-5);
+        }
+        button {
+            width: 50%;
+        }
+        footer {
+            align-self: center;
+        }
+}
+
+@media screen and (width <= 550px) {
+
+    .wrapper {
+        padding: 2rem;
+    }
+    header > img {
+        width: 40%;
+    }
+    button {
+        width: 85%;
+    }
+
+    }
